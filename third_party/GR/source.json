@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/chiakicage/cxldsagr",
+  "revision": "7ffeaeef1409d685c02c0b9150bdf3ea02a176d4",
+  "scope": "GR input generation only; includes the delivery-side NSA prompt compatibility changes",
+  "files": {
+    "__init__.py": "26c88a81740555c7801e3d3e82b4e08599da112b7e134290e0fc23070f416eff",
+    "analysis/heat_curves.csv": "7f94568e6136f894d27085827760b0dad71301b4f8f94f0b02d1b58018e1186f",
+    "analysis/heat_provenance.json": "a11bbc946921b738ec80edc72a905a8131291c5c203c35fe32566dc0644e1205",
+    "dataset.py": "0ec95750722fefe387c0c62a2064e101622d060ac69d4c933044b1a950c24ce4",
+    "heat.py": "c6ebe2ebc73db10c4f2706701d3e7a1c7aee2dc40162e00f6b5ce4550a587f4f",
+    "input_generator.py": "bb69eee4737057deb004f7b27844255f91af95c199a2219ec766245f1d65c955",
+    "scheduling.py": "e7e24cc2fcaf90796494e0c139d8c1e300a5e4ea42e294d6293939746f1bb8c6"
+  }
+}

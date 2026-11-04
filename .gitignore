@@ -1,0 +1,25 @@
+.venv/
+artifacts/
+cache/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*.so
+*.o
+*.a
+*.pt
+*.safetensors
+
+# New runs stay outside the source archive; results/final is the compact archive.
+runs/
+logs/
+*.log
+*.bin
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.DS_Store
+.env
+.env.*

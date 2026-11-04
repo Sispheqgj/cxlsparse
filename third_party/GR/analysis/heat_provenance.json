@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-09-07T16:12:17.573942+00:00",
+  "sources": [
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/beauty/timestep_map.json",
+      "bytes": 8355409,
+      "sha256": "914e69779ef259452f5ec4b2473081d788690be7f6276309e396cf0cba6a0028"
+    },
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/games/timestep_map.json",
+      "bytes": 7358367,
+      "sha256": "f4dbb017fe38721c460d50ef6db65fe4cd362f9886b96017db5cf45a2fe1e8ec"
+    },
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/books/timestep_map.json",
+      "bytes": 373116163,
+      "sha256": "a577b421d9fb94f1552f6d45a513043835adf9d14949bf78fe279d4c3ca875d7"
+    },
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/clothing/timestep_map.json",
+      "bytes": 15463403,
+      "sha256": "0c098df498e6a5b5b8910a5d2f953fb8bb84626523f5f539d075149e4b7dd232"
+    },
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/industrial/users_100k.csv",
+      "bytes": 3762274,
+      "sha256": "e1f920b7040adca3ebd96864959e6497027450e509ead11cf3957882b62ead2a"
+    },
+    {
+      "path": "/mnt/nfs/share/archive/260808_old_nfs/share/wsh/Bi-KV/Bi-KV/data/industrial/users_10M.csv",
+      "bytes": 398404397,
+      "sha256": "d7f66e7177b7bcf2ab23503657bca3163124208c4893e1830008114a2f12c311"
+    }
+  ],
+  "python": "3.12.14",
+  "numpy": "2.5.0",
+  "matplotlib": "3.11.1",
+  "ijson": "3.5.1",
+  "population": "all users in each input file",
+  "heat_exponent": 1,
+  "quantile_method": "numpy linear",
+  "top_fraction_rounding": "ceil",
+  "industrial_primary_field": "pv_int"
+}

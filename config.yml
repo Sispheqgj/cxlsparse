@@ -1,0 +1,123 @@
+# Default smoke configuration: simulated model and DRAM.
+scheduler:
+  log_dir: logs
+  log_level: DEBUG
+  log_max_bytes: 10485760
+  log_backup_count: 5
+  workers:
+  - 127.0.0.1:50051
+  max_pending: 1024
+  batch_size: 4
+  max_history: 4096
+  source: gr
+  input: null
+  output: artifacts/results.json
+  save_requests: null
+  num_requests: 8
+  users: 2
+  history_length: 64
+  append_tokens: 0
+  candidates: 2
+  sampling: random
+  zipf_alpha: 1.0
+  seed: 0
+  gr_heat_source: curve
+  gr_heat_path: null
+  gr_curve_dataset: beauty
+  gr_curve_field: null
+  gr_industrial_heat_field: pv_share
+  gr_data_root: artifacts/gr-data
+  gr_tokenizer: artifacts/models/NSA-1B/tokenizer.json
+  gr_prompt_format: nsa
+  gr_text_material: synthetic
+  gr_text_dataset: beauty
+  gr_text_catalog_path: null
+  gr_user_lengths:
+  - 256
+  gr_user_probabilities: null
+  gr_item_lengths:
+  - 128
+  gr_item_probabilities: null
+  gr_candidate_count: 20
+  gr_history_cache_users: 8
+  gr_qps: 100
+  gr_arrival: poisson
+  gr_sampling: weighted
+  run_timeout: 300.0
+worker:
+  model: test
+  model_path: null
+  nsa_query_tile: 32
+  nsa_kernel_backend: fla
+  nsa_selected_backend: triton
+  nsa_cross_query_dedup: true
+  nsa_rdma_registration: persistent
+  nsa_selected_mode: overlap
+  nsa_selected_order: strict
+  nsa_selected_ready_window: 1
+  nsa_selected_read_order: physical
+  nsa_selected_read_group_size: 16
+  nsa_selected_max_queries: 128
+  nsa_selected_query_group: 1
+  nsa_selected_workspace_mib: 512
+  nsa_cache_backend: auto
+  nsa_cuda_graphs: true
+  nsa_graph_cache_size: 4
+  log_dir: logs
+  log_level: DEBUG
+  log_max_bytes: 10485760
+  log_backup_count: 5
+  listen: 127.0.0.1:50051
+  backend: dram
+  pages: 2048
+  page_size: 64
+  dim: 64
+  layers: 2
+  max_users: 16
+  max_history: 4096
+  hot: 32
+  topk: 8
+  indexer_n_heads: 64
+  indexer_head_dim: 128
+  indexer_q_lora_rank: 128
+  indexer_rope_dim: 64
+  indexer_rope_theta: 10000.0
+  indexer_rope_factor: 40.0
+  indexer_original_seq_len: 4096
+  indexer_beta_fast: 32.0
+  indexer_beta_slow: 1.0
+  indexer_seed: 0
+  indexer_query_tile: 32
+  kernel_dir: artifacts/kernels
+  queue_capacity: 1
+  max_batch_size: 16
+  timing_breakdown: false
+  dax_device:
+  - dax0.0
+  - dax0.0
+  dax_offset:
+  - 0
+  - 128GiB
+  dax_bytes:
+  - 128GiB
+  - 128GiB
+  pool_target: null
+  rdma_device: mlx5_0
+  rdma_port: 1
+  gid_index: 0
+build-kernels:
+  cuda_arch: auto
+  log_dir: logs
+  log_level: DEBUG
+  log_max_bytes: 10485760
+  log_backup_count: 5
+pool:
+  log_dir: logs
+  log_level: DEBUG
+  log_max_bytes: 10485760
+  log_backup_count: 5
+  listen: 127.0.0.1:50052
+  max_bytes: 1073741824
+  rdma_device: mlx5_0
+  rdma_port: 1
+  gid_index: 0

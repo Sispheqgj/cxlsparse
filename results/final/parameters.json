@@ -1,0 +1,43 @@
+{
+  "output": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal",
+  "snapshot": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/source",
+  "requests": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/request-source.json",
+  "cases": [
+    "rdma_batch_private",
+    "rdma_optimized_private",
+    "cxl_batch_private",
+    "cxl_tma_private",
+    "cxl_tma_shared"
+  ],
+  "histories": [
+    4096,
+    8192,
+    16384
+  ],
+  "lengths": [
+    128,
+    256
+  ],
+  "rounds": 2,
+  "repeats": 15,
+  "warmups": 3,
+  "prefill_chunk": 2048,
+  "seed": 29,
+  "skip_mixed": false,
+  "save_outputs": true,
+  "frozen": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/source",
+  "repository": "/home/qiaoguanjia/sparsegr/cxl-recsys",
+  "baseline_snapshot": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/source",
+  "runtime_snapshot": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/source",
+  "worker_script": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/source/scripts/nsa_gr_worker.py",
+  "variants": [
+    "rdma_batch_private",
+    "rdma_optimized_private",
+    "cxl_batch_private",
+    "cxl_tma_private",
+    "cxl_tma_shared"
+  ],
+  "order_probe": false,
+  "window_probe": false,
+  "prepare_probe": false
+}

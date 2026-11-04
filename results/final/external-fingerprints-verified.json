@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": {
+    "model": {
+      "path": "/home/qiaoguanjia/sparsegr/cxl-recsys/artifacts/models/NSA-1B",
+      "passed": true,
+      "actual_files": {
+        "config.json": "36f88a57a5d36a3d4bdc399ebe277b7ea3cceed60dd212afd90cde97015fc4bd",
+        "model.safetensors": "3cc94ca56988da19809316d68397998bd837a7f84cf110b274487419cb46506e",
+        "source.json": "5776cb0df34fb36735357f82bff9d40092975002ec5497172438574e7b48d8e6",
+        "special_tokens_map.json": "849070cae53bd45439e64ce5b1ddd650a66081b1bd47895c5a58939a05055579",
+        "tokenizer.json": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b",
+        "tokenizer_config.json": "20491766c1f68a4007ade693445ec117f4251124a94289d57d602ad21b7e9e93"
+      },
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "kernels": {
+      "path": "/home/qiaoguanjia/sparsegr/cxl-recsys/artifacts/kernels-tilelang",
+      "passed": true,
+      "actual_files": {
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/.ninja_deps": "84481925d3ab009c30acb573f97bea885431be5ae38b8ee42fd954c11b8ba16c",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/.ninja_log": "201bcb1f90e84194d84975154db0433b37434d6425c7efdbb0132f3d0766078e",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/build.ninja": "f5d99bba1c3bf8ea068a23c90ab5992c0d7396c9d7dbc2718209f710afe154ae",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/cuda.cu": "d17f4c49c053b344a053b94e2d3cd0d609d52a44552b803da42685a2b96eaf19",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/cuda_0.o": "f20d8b25be6b8bef124682567bcc44b118c7237023a7cb2c66361ba03f5d27c1",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/cxl_planner_sm90_256.so": "c4d67b62c814edf9ea165e38fc504322e097e2472e8c112cbce22526bd152c4f",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/main.cpp": "e48b240099890a6efec437f4faa7e61fc2613b561fba2e29a490811a26185d26",
+        "abi8-8ae96202-ffi0.1.12/cxl_planner_sm90_256/metadata.json": "0f1a3014c6a6a1a24aed7964496832f57a51bb9eb42dd973c9a0bc80360971cb",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/.ninja_deps": "0f2156f4ada9bb01293e629ba4fb8468f0ab24b2a3bdfc9814a25af233461dc2",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/.ninja_log": "c80835a4bb4a1c5db4f4412e37e5d3dd73e87860a2e8c718b7b318af4076a282",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/build.ninja": "167454eb1b5387fd19e53388fc4061d6dc3d688832319e9d923de15fa4b04470",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/cuda.cu": "f0ab14a9e639880a45d04874b3c687e5cd28a7e448cecd2265c5c4e7f841c77e",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/cuda_0.o": "477230fab4cef82c12b78bac8686a2eb8b3499f0c8fc6b565bb2323bcd36b136",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/cxl_transfer_sm90_256.so": "b992748825718a6c744a0116598fbaa10991c2c2c68a453e91fb960fb3062c0f",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/main.cpp": "e48b240099890a6efec437f4faa7e61fc2613b561fba2e29a490811a26185d26",
+        "abi8-8ae96202-ffi0.1.12/cxl_transfer_sm90_256/metadata.json": "64a149491f05f2c2063c98c724f0022970dc341e03278e0888997e09538acdf1"
+      },
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "requests": {
+      "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/request-source.json",
+      "actual_sha256": "bacbdd0b07c40d45d967d03de8054602f6e7b7d03b05a3c74e0ed44c505cfafd",
+      "expected_sha256": "bacbdd0b07c40d45d967d03de8054602f6e7b7d03b05a3c74e0ed44c505cfafd",
+      "passed": true
+    }
+  },
+  "verified_utc": "2026-11-03T11:30:26.828290+00:00",
+  "original_fingerprints_sha256": "a3a523f26b873ec187fde81491d92e1c6d39a7796ab42477a957f40051368757"
+}

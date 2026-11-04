@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/fla-org/native-sparse-attention",
+  "revision": "bd67af59b90afa34b25f61d2922e612d10dba3bd",
+  "files": {
+    "naive.py": {
+      "source": "native_sparse_attention/ops/naive.py",
+      "sha256": "a1cfea332817ce20693986f2ee38d597e8fee003b17d18825f5c19b0b41fb8af"
+    },
+    "parallel.py": {
+      "source": "native_sparse_attention/ops/parallel.py",
+      "sha256": "6165a01e55a556c96a9be0e0fad79a6e5e1357fc362ecd33567eb4321cbd12dd"
+    },
+    "utils.py": {
+      "source": "native_sparse_attention/ops/utils.py",
+      "sha256": "97e38c65ba5d51e0b03e339b750ca5543707a0cf2546d5e5646a1fde81f3e1d0"
+    },
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "98d913740dd16462d79ca94c88269a166673058d95c941f8fc98cb3fb39a7b45"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# Hardware example from the final H100 run. Reserve the DAX range before use.
+scheduler:
+  batch_size: 1
+  max_history: 65536
+worker:
+  model: nsa_1b
+  model_path: artifacts/models/NSA-1B
+  backend: cxl
+  dax_device:
+  - /dev/dax0.0
+  dax_offset:
+  - 254GiB
+  dax_bytes:
+  - 1GiB
+  max_users: 1
+  max_history: 65536
+  max_batch_size: 1
+  pages: 32768
+  page_size: 64
+  hot: 256
+  nsa_kernel_backend: fla
+  nsa_cache_backend: auto
+  nsa_cuda_graphs: true
+  nsa_graph_cache_size: 5
+  nsa_selected_backend: tilelang_tma
+  nsa_selected_max_queries: 1024
+  nsa_selected_query_group: 1
+  nsa_selected_workspace_mib: 512
+  kernel_dir: artifacts/kernels-tilelang
+  nsa_cross_query_dedup: true
+  nsa_selected_read_order: consumption_depth
+  nsa_selected_ready_window: 1
+  nsa_selected_order: strict
+  nsa_selected_mode: overlap
+  rdma_device: mlx5_1
+  rdma_port: 1
+  gid_index: 1

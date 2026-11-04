@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "matched_private_comparisons": 1224,
+  "shared_private_request_pairs": 408,
+  "reductions": [
+    {
+      "stage": "mixed",
+      "history": 4096,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 3532570624,
+      "shared_read_bytes": 410411008,
+      "reduction_fraction": 0.8838208625719467,
+      "private_over_shared": 8.607397353240584
+    },
+    {
+      "stage": "mixed",
+      "history": 4096,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 6530887680,
+      "shared_read_bytes": 508354560,
+      "reduction_fraction": 0.9221614909169591,
+      "private_over_shared": 12.84711143340585
+    },
+    {
+      "stage": "mixed",
+      "history": 8192,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 3862315008,
+      "shared_read_bytes": 559054848,
+      "reduction_fraction": 0.8552539482558954,
+      "private_over_shared": 6.9086513100052755
+    },
+    {
+      "stage": "mixed",
+      "history": 8192,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 6997094400,
+      "shared_read_bytes": 739860480,
+      "reduction_fraction": 0.8942617552794485,
+      "private_over_shared": 9.457316060455074
+    },
+    {
+      "stage": "mixed",
+      "history": 16384,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 4424433664,
+      "shared_read_bytes": 738762752,
+      "reduction_fraction": 0.8330265954689201,
+      "private_over_shared": 5.988977722580144
+    },
+    {
+      "stage": "mixed",
+      "history": 16384,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 8218460160,
+      "shared_read_bytes": 1001594880,
+      "reduction_fraction": 0.8781286444783349,
+      "private_over_shared": 8.205373573794626
+    },
+    {
+      "stage": "steady",
+      "history": 4096,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 3381411840,
+      "shared_read_bytes": 409436160,
+      "reduction_fraction": 0.8789156188676502,
+      "private_over_shared": 8.258703481392557
+    },
+    {
+      "stage": "steady",
+      "history": 4096,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 6317015040,
+      "shared_read_bytes": 508354560,
+      "reduction_fraction": 0.9195261437908496,
+      "private_over_shared": 12.426395939086294
+    },
+    {
+      "stage": "steady",
+      "history": 8192,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 3727441920,
+      "shared_read_bytes": 558366720,
+      "reduction_fraction": 0.85020109448144,
+      "private_over_shared": 6.675616197183099
+    },
+    {
+      "stage": "steady",
+      "history": 8192,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 6810992640,
+      "shared_read_bytes": 739860480,
+      "reduction_fraction": 0.8913725914700151,
+      "private_over_shared": 9.205779770802192
+    },
+    {
+      "stage": "steady",
+      "history": 16384,
+      "extend": 128,
+      "requests": 30,
+      "private_read_bytes": 4244889600,
+      "shared_read_bytes": 737157120,
+      "reduction_fraction": 0.8263424518743667,
+      "private_over_shared": 5.758459743290548
+    },
+    {
+      "stage": "steady",
+      "history": 16384,
+      "extend": 256,
+      "requests": 30,
+      "private_read_bytes": 7978475520,
+      "shared_read_bytes": 1001594880,
+      "reduction_fraction": 0.8744628748325094,
+      "private_over_shared": 7.965771071034229
+    }
+  ],
+  "scope": "Software-accounted external payload reads; not physical link traffic. Runtime diagnostics check the private planner route; target non-aliasing is a separate planner correctness check."
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/fla-org/native-sparse-attention",
+  "revision": "bd67af59b90afa34b25f61d2922e612d10dba3bd",
+  "source_file": "native_sparse_attention/ops/parallel.py",
+  "source_sha256": "6165a01e55a556c96a9be0e0fad79a6e5e1357fc362ecd33567eb4321cbd12dd",
+  "adaptations": [
+    "explicit absolute query positions and compressed key length",
+    "fixed launch configuration: one warp, three stages; no runtime autotune",
+    "online merge width >= 2 * selected blocks",
+    "current block ranks first, smaller block ID breaks exact ties, invalid entries rank last"
+  ]
+}

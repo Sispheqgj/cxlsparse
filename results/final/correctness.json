@@ -1,0 +1,3912 @@
+{
+  "passed": true,
+  "reference": "cxl_batch_private",
+  "tolerance": {
+    "atol": 0.03,
+    "rtol": 0.03
+  },
+  "cases": [
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "3ee744fa105c9f168fb9b6083af0aeaf2fc79e6e31ec49415782c1f4af415e96",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-4096/pool-final-state.json",
+            "sha256": "0eb72b046d28a911f341ce8060397965ea6913197f4e2003d86e880ff8243ab2",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 33554432,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "ef8f1e3aa65d1564eedd05a36de46101bad6f72c072f1b3b5e7717d7634b6921",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "c84b53210ab378ec3cdb0a461207008eb4f834436f92ba3b84d817e0152db3bb",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 4096,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "542fe08075c1325fc359d1f5d32b89b87859eb9e82628f161395d3bda97d6369",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-4096/pool-final-state.json",
+            "sha256": "0eb72b046d28a911f341ce8060397965ea6913197f4e2003d86e880ff8243ab2",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 33554432,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "ef8f1e3aa65d1564eedd05a36de46101bad6f72c072f1b3b5e7717d7634b6921",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "c84b53210ab378ec3cdb0a461207008eb4f834436f92ba3b84d817e0152db3bb",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 4096,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "f245d04b3d813f515e122a881b1ab5fe1d2f0ac4b9c94e255731ffc9247a4f38",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096/dax-backup.json",
+            "sha256": "f665e8ddc057f2051a98e60350600a3d3a6ff85f0c9c2c9687265767d368ea95",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "ef8f1e3aa65d1564eedd05a36de46101bad6f72c072f1b3b5e7717d7634b6921",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "c84b53210ab378ec3cdb0a461207008eb4f834436f92ba3b84d817e0152db3bb",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 4096,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "0edb7274e8e497b782f7f816482f4a7c5da3b93b876f1712e941fcadb67523ed",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096/dax-backup.json",
+            "sha256": "7a09975a7433ae65b90067580d28059c19aabe6fa48d67594f41f5a351eefcb0",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "ef8f1e3aa65d1564eedd05a36de46101bad6f72c072f1b3b5e7717d7634b6921",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "c84b53210ab378ec3cdb0a461207008eb4f834436f92ba3b84d817e0152db3bb",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 4096,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "4ef7c5048697d3bf9322e626b5b34dfd151d8eb881cf561256a5a1ff4963bb01",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-8192/pool-final-state.json",
+            "sha256": "37ff1c61423f3b5768a97317b4e475cf860da552a105f778e0636f9a1352db0b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 67108864,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "520a8ebea3cf8bda837a5be0b1cd8132990a07886efda73ca2c660d0a7cda4ea",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "383ecbee6df6fe97b413f1055e4510c1fbd97b2200b6e0f5f9a24698d09d265c",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 8192,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "d07aa398cb764a04eca45ce0df5e81e81dfd9430d202b93b5c7a547683e54912",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-8192/pool-final-state.json",
+            "sha256": "37ff1c61423f3b5768a97317b4e475cf860da552a105f778e0636f9a1352db0b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 67108864,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "520a8ebea3cf8bda837a5be0b1cd8132990a07886efda73ca2c660d0a7cda4ea",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "383ecbee6df6fe97b413f1055e4510c1fbd97b2200b6e0f5f9a24698d09d265c",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 8192,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "7ea366c11d073eb7d032c5771ea3701f258fe9a215324b0815fdf3bd08c9bdbd",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192/dax-backup.json",
+            "sha256": "ddd71a550ed6a6ade5cc710ba4769f63ba03d14de7077b0ea52cf5fb519a6889",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "520a8ebea3cf8bda837a5be0b1cd8132990a07886efda73ca2c660d0a7cda4ea",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "383ecbee6df6fe97b413f1055e4510c1fbd97b2200b6e0f5f9a24698d09d265c",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 8192,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "4e57ca32bddb3526be679e727bf9a8926051392bb67e1065c7d6b9cbd73b5a4b",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192/dax-backup.json",
+            "sha256": "05dca01c5bef08eca56941d1d3d3996040876ebe8113b9470951f83fa6eb8de3",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "520a8ebea3cf8bda837a5be0b1cd8132990a07886efda73ca2c660d0a7cda4ea",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "383ecbee6df6fe97b413f1055e4510c1fbd97b2200b6e0f5f9a24698d09d265c",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 8192,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "7683462afad302eda67d0cb2fcf8be9b7a910d846f6f99e284c6a6795a362a5b",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-16384/pool-final-state.json",
+            "sha256": "df31c0f44785a8707c67a957a8c845ff37fb1b2af43515b90376cec90aa6a26b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 134217728,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "4300a8f5435984afa7fa808853b52d2e74148aa2ab00b8b4fe4772151f33c048",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "63642c2f72a25a2484b8a9e31c7e64a891db5b08038a6fb38f15e8dedfce10c9",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 16384,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "44ea7a1545c1e782afb611c1817c29e5f655f9a1a5b61c61d592300588a76cac",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-16384/pool-final-state.json",
+            "sha256": "df31c0f44785a8707c67a957a8c845ff37fb1b2af43515b90376cec90aa6a26b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 134217728,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "4300a8f5435984afa7fa808853b52d2e74148aa2ab00b8b4fe4772151f33c048",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "63642c2f72a25a2484b8a9e31c7e64a891db5b08038a6fb38f15e8dedfce10c9",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/rdma/rdma_optimized_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 16384,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "7905524296a57cf4fc72f1e7618a046ff34d226ef589a455467d2f269cfdb87a",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384/dax-backup.json",
+            "sha256": "f84442ab9862f2c6118b2c0c124814f6c5e40d77a89db939dd4f8b41336897a0",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "4300a8f5435984afa7fa808853b52d2e74148aa2ab00b8b4fe4772151f33c048",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "63642c2f72a25a2484b8a9e31c7e64a891db5b08038a6fb38f15e8dedfce10c9",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 16384,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "1f21f8618c72f163c1d70ecb5bc65110ba88128d21ff0b0d3453be44a1f8067f",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384/dax-backup.json",
+            "sha256": "525cb67c376bb7d268f8115dfa10a13c95634dd5baef2353c3663fe3d5fe5a06",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "4300a8f5435984afa7fa808853b52d2e74148aa2ab00b8b4fe4772151f33c048",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "63642c2f72a25a2484b8a9e31c7e64a891db5b08038a6fb38f15e8dedfce10c9",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_tma_shared/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-0/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 0,
+      "history": 16384,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "5a91a1a4cf63131359e2d95a5741aa8e556cf4c1e9a6975c3cd2fd1f87ce681c",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-4096/pool-final-state.json",
+            "sha256": "0eb72b046d28a911f341ce8060397965ea6913197f4e2003d86e880ff8243ab2",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 33554432,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "c8344d76eb8ff05a41af42fe6e7b427f61bf9f31c4a462848c056cd6e557e5ab",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "6bd0422c63ed16baea15b06e3603a1a2f0b27fe198ea5ca94fed056134f9101e",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 4096,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "3039c5b6884df52071e4c618cf15d362be89a9921cd49dd359abf5c46caddf43",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-4096/pool-final-state.json",
+            "sha256": "0eb72b046d28a911f341ce8060397965ea6913197f4e2003d86e880ff8243ab2",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 33554432,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "c8344d76eb8ff05a41af42fe6e7b427f61bf9f31c4a462848c056cd6e557e5ab",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "6bd0422c63ed16baea15b06e3603a1a2f0b27fe198ea5ca94fed056134f9101e",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 4096,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "da0597d2b2d12a15abe2f97b79c37cc51c038baf69b842b94d283d0d0cb29574",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096/dax-backup.json",
+            "sha256": "afe5e7042b3b13e085fad0f51854548c38caabced984cbc9a5f63267afe6d0ee",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "c8344d76eb8ff05a41af42fe6e7b427f61bf9f31c4a462848c056cd6e557e5ab",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "6bd0422c63ed16baea15b06e3603a1a2f0b27fe198ea5ca94fed056134f9101e",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 4096,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "33238fb946b1ae5a497afe98ec27627d993da80d1bd638aba9a9839018319e89",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096/dax-backup.json",
+            "sha256": "26a355b69ef5079abbf98b8368c9cee1afb632cfb055ca45563d9e57c3eeaab3",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096",
+          "inputs_sha256": "23ce84f6588e50b9108db599ea92423f3659e97ea2426aa339845c9224a9e542",
+          "canonical_inputs_sha256": "0d05e1cfca791390e1df4c092788b6a090598afca76c69e4860ad15b077ad9ee",
+          "config_sha256": "c8344d76eb8ff05a41af42fe6e7b427f61bf9f31c4a462848c056cd6e557e5ab",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup.json",
+            "sha256": "6bd0422c63ed16baea15b06e3603a1a2f0b27fe198ea5ca94fed056134f9101e",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 33554432,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/dax-backup-0.bin",
+                  "sha256": "7167a8b27e896af029cc9ee38fdd7f66f2d4b8181ea1ec461122e674ab3c4aa1",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51",
+            "reference": "6e0839c758f6cd3b71f8a120eaecf14281d3a7c26cfb8103353b583db50feb51"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-128.pt",
+              "sha256": "9d1d13cd1ca6bf1dd7f46ce195375cfe7d7d27105bbfd9e60e564891324a04e1"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f",
+            "reference": "837132e8e413a84461bc0130de2fa4395b931ae6d2816424d5f90d49a631d55f"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-4096/outputs/q-256.pt",
+              "sha256": "6dff20e0ea7c25cce56426fff471cf3c03da477fd22aabec287a26bcc5caf782"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 4096,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "2ec311feb2da89a048a3ff9bc21a72a38074a1103092274295b5b7d34bdc01b9",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-8192/pool-final-state.json",
+            "sha256": "37ff1c61423f3b5768a97317b4e475cf860da552a105f778e0636f9a1352db0b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 67108864,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "8e423ccce414f735c45095cbf6c3fe980a0c2cd68e5b9f4714df73fabb85a62d",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "2f3a9a5a7965644027f5f801046faf58ebbad953ef62bd7238e966b68eb4ac15",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 8192,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "2fa2a1b2ee2b1c5e8a715067fee8de766ff2002697aa5b9ea477824a4b66dadd",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-8192/pool-final-state.json",
+            "sha256": "37ff1c61423f3b5768a97317b4e475cf860da552a105f778e0636f9a1352db0b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 67108864,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "8e423ccce414f735c45095cbf6c3fe980a0c2cd68e5b9f4714df73fabb85a62d",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "2f3a9a5a7965644027f5f801046faf58ebbad953ef62bd7238e966b68eb4ac15",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 8192,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "1ac55d5a85fc826d7ba1011424bc83408e8ac17ce331dfd159c0f569f00c02b8",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192/dax-backup.json",
+            "sha256": "decb603272a540ca267908d390666255d06bee302ffed40c1c3ee498ed602dae",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "8e423ccce414f735c45095cbf6c3fe980a0c2cd68e5b9f4714df73fabb85a62d",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "2f3a9a5a7965644027f5f801046faf58ebbad953ef62bd7238e966b68eb4ac15",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 8192,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "12b79aae7d5f84ac78077be788ca0accb0bdcd8116d50aa64586145b5ee963fc",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192/dax-backup.json",
+            "sha256": "c7b4a744acf779b06759a1031e1b939d2058bd649e80190f5f71baf2eefb4ad2",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192",
+          "inputs_sha256": "289a6a0bf4f046dee30eb7d2eda21ab7b6f29fdea8e8aeb0117b0bbf19df049c",
+          "canonical_inputs_sha256": "1e67bb356dac18a259ddec1bf1f07532f08fe8022e9e3ae521cb223cec848101",
+          "config_sha256": "8e423ccce414f735c45095cbf6c3fe980a0c2cd68e5b9f4714df73fabb85a62d",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup.json",
+            "sha256": "2f3a9a5a7965644027f5f801046faf58ebbad953ef62bd7238e966b68eb4ac15",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 67108864,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/dax-backup-0.bin",
+                  "sha256": "ee3fa5ad32534e1722abc191371a326431508721037735a6d9eb8c0a6505167d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298",
+            "reference": "f261ee815c50652b04eb1b32d6e9710bd551402a281ccc47e8c1339b46ecb298"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-128.pt",
+              "sha256": "645d6d469be8513666826ee5c1442ab527c9f90b4bd658d93b5e48003953908f"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4",
+            "reference": "aa9327733d405bf7a83bca361f57ac34cf9c8911099dc44eaf04c6f3941044c4"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-8192/outputs/q-256.pt",
+              "sha256": "6a720bf2e42dc86ad0a552d7023fe38f1bfe147aaa828c3a13f53e6f3f8e4794"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 8192,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "e4311498d97a7e8568e7133489e4efc520b2e8b9405cd4da102c8b1b06f1ea0f",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-16384/pool-final-state.json",
+            "sha256": "df31c0f44785a8707c67a957a8c845ff37fb1b2af43515b90376cec90aa6a26b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 134217728,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "390618c439c14c3018cfa23751041903c8b051b0c462e8c75323e0481c3d2b2e",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "2ca073a208e4d68940c03ffd8ddf924af9c555f3824df352cea91d807d94b718",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 16384,
+      "actual": "rdma_batch_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "71cc00271fff36a6b3204c88e0c2e341570caa4eda917bddbd2da97626f27e54",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-16384/pool-final-state.json",
+            "sha256": "df31c0f44785a8707c67a957a8c845ff37fb1b2af43515b90376cec90aa6a26b",
+            "recorded": {
+              "sessions": 0,
+              "allocated_bytes": 0,
+              "capacity_bytes": 134217728,
+              "transport": "ibverbs-rc"
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "390618c439c14c3018cfa23751041903c8b051b0c462e8c75323e0481c3d2b2e",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "2ca073a208e4d68940c03ffd8ddf924af9c555f3824df352cea91d807d94b718",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/rdma/rdma_optimized_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 16384,
+      "actual": "rdma_optimized_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": true,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "654e053bcbecd92ebed4cc9a57b02eb5ee1fef0005af36f091c9d4cf9901b629",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384/dax-backup.json",
+            "sha256": "1f09b233f81fa4a712912f5fdbf98024f1c3e9f3fffc3d6ba039c34130f0dd78",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "390618c439c14c3018cfa23751041903c8b051b0c462e8c75323e0481c3d2b2e",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "2ca073a208e4d68940c03ffd8ddf924af9c555f3824df352cea91d807d94b718",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 16384,
+      "actual": "cxl_tma_private",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    },
+    {
+      "sources": {
+        "actual": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "b62bfb061169e3672ba3983143b4aa4618a666e77b54e5b1fe6b623af1248cc2",
+          "selected_backend": "tilelang_tma",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384/dax-backup.json",
+            "sha256": "65d53ec97cea4179d6c5c511872d29d74467872de59b20241d8bd8324f26c0aa",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        },
+        "reference": {
+          "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384",
+          "inputs_sha256": "887ddabc6f5e4eda4395e96d25c23499c4984407a1fd21d90a5fcd11655b208a",
+          "canonical_inputs_sha256": "2e65299e163271e084ad71f0cc03d0e4cff7e6cac85af984719a87ea78a19b7c",
+          "config_sha256": "390618c439c14c3018cfa23751041903c8b051b0c462e8c75323e0481c3d2b2e",
+          "selected_backend": "triton_gr",
+          "cleanup": {
+            "verified": true,
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup.json",
+            "sha256": "2ca073a208e4d68940c03ffd8ddf924af9c555f3824df352cea91d807d94b718",
+            "recorded": {
+              "restored": true,
+              "regions": [
+                {
+                  "device": "/dev/dax0.0",
+                  "offset": 272730423296,
+                  "bytes": 134217728,
+                  "file": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/dax-backup-0.bin",
+                  "sha256": "170c6c1068cd88c7b45d420b15111ee0a6cd5141b7670e04d6fdd008d056708d",
+                  "restored": true
+                }
+              ]
+            }
+          },
+          "run_state": {
+            "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/run-state.json",
+            "sha256": "d767009b0d5b431f19e01557724eb04082e642d08618849b3e8c61ab19e8616b",
+            "recorded": {
+              "completed": true,
+              "requests_completed": true,
+              "cleanup_errors": [],
+              "forced_process_stops": []
+            }
+          }
+        }
+      },
+      "same_inputs": true,
+      "identical_input_file_sha256": true,
+      "errors": [],
+      "outputs": [
+        {
+          "extend": 128,
+          "input_sha256": {
+            "actual": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176",
+            "reference": "f58d6214116e14371d2ba7437698f8930193a8e6925c9a653faec92597ebd176"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-128.pt",
+              "sha256": "84bd1cbfd48f16dd0a0d5f6c40937cbb78dfc6824055f43d9cd3f182a74a8bf9"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            128,
+            2048
+          ],
+          "reference_shape": [
+            128,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 262144,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        },
+        {
+          "extend": 256,
+          "input_sha256": {
+            "actual": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961",
+            "reference": "53f0f0ce098895dcb40a99604e069fbddacd6cab6395fa8426cb438ce0ac3961"
+          },
+          "sources": {
+            "actual": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_tma_shared/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            },
+            "reference": {
+              "path": "/home/qiaoguanjia/experiment-results/kvpool-delivery-20261103T112349Z/formal/round-1/cxl/cxl_batch_private/h-16384/outputs/q-256.pt",
+              "sha256": "0492d3044fece3e9e90fa1b47da859f99537bed1429ee8e62acd929cef0e6713"
+            }
+          },
+          "errors": [],
+          "same_input": true,
+          "actual_shape": [
+            256,
+            2048
+          ],
+          "reference_shape": [
+            256,
+            2048
+          ],
+          "actual_dtype": "torch.bfloat16",
+          "reference_dtype": "torch.bfloat16",
+          "exact": true,
+          "allclose": true,
+          "elements": 524288,
+          "outside_count": 0,
+          "outside_fraction": 0.0,
+          "max_abs": 0.0,
+          "relative_l2": 0.0,
+          "actual_finite": true,
+          "reference_finite": true,
+          "different_count": 0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "round": 1,
+      "history": 16384,
+      "actual": "cxl_tma_shared",
+      "reference": "cxl_batch_private",
+      "explicitly_allowed_backend_change": false,
+      "same_runtime_source": true
+    }
+  ],
+  "parameters_sha256": "4ffb655f82c6812e8efecd6423e240344c8d0ddf178550b8cf57e6f7a008a321",
+  "scope": "Full hidden outputs from first revisit at each Extend; no inference about every later request."
+}
